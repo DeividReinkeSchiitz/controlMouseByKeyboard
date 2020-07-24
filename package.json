@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "iohook": "^0.6.2",
+    "robotjs": "^0.6.0"
+  },
+  "name": "controllmousebykeyboard",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
