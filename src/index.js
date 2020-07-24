@@ -1,19 +1,10 @@
-const iohook = require(`iohook`);
+import iohook from "iohook";
+import RegisterShortcutByKeyCode from "./shortcuts.js";
+import keys from "./keys.js";
 
-const RegisterShortcutByKeyCode = require("./shortcuts");
 const {
-  ControlLeft,
-  AltLeft,
-  NumLock1,
-  NumLock2,
-  NumLock3,
-  NumLock4,
-  NumLock5,
-  NumLock6,
-  NumLock7,
-  NumLock8,
-  NumLock9,
-} = require("./keys");
+  ControlLeft, AltLeft, NumLock1, NumLock2, NumLock3, NumLock4, NumLock5, NumLock6, NumLock7, NumLock8, NumLock9,
+} = keys;
 
 const constantKey = [ControlLeft, AltLeft];
 const leftDownKeys = [...constantKey, NumLock1];
@@ -58,15 +49,15 @@ numlock8.addMoveUp();
 numlock9.addMoveUp();
 numlock9.addMoveRight();
 
-numlock1.start()
-numlock2.start()
-numlock3.start()
-numlock4.start()
-numlock5.start()
-numlock6.start()
-numlock7.start()
-numlock8.start()
-numlock9.start()
+numlock1.start();
+numlock2.start();
+numlock3.start();
+numlock4.start();
+numlock5.start();
+numlock6.start();
+numlock7.start();
+numlock8.start();
+numlock9.start();
 
 //     see another keys with thi code:        //
 /* iohook.on("keydown", (event) => {

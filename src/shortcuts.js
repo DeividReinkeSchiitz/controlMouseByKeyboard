@@ -1,5 +1,5 @@
-const iohook = require("iohook");
-const robot = require("robotjs");
+import iohook from "iohook";
+import robot from "robotjs";
 
 class RegisterShortcutByKeyCode {
   constructor(keyCode) {
@@ -12,7 +12,7 @@ class RegisterShortcutByKeyCode {
     robot.moveMouseSmooth(pos.x, pos.y - 25, 0);
   };
 
-  addMoveDown = () => this.registerfunctions.addMoveDown = ()=> {
+  addMoveDown = () => this.registerfunctions.addMoveDown = () => {
     const pos = robot.getMousePos();
     return robot.moveMouseSmooth(pos.x, pos.y + 25, 0);
   };
@@ -31,14 +31,11 @@ class RegisterShortcutByKeyCode {
     robot.mouseClick();
   };
 
-  start = () =>
-    iohook.registerShortcut(this.keyCode, () => {
-      const registerfunctions = this.registerfunctions;
+  start = () => iohook.registerShortcut(this.keyCode, () => {
+    const { registerfunctions } = this;
 
-      Object.keys(registerfunctions).map((key, index) => {
-        registerfunctions[key]();
-      });
-    });
+    Object.keys(registerfunctions).map((key) => registerfunctions[key]());
+  });
 }
 
-module.exports = RegisterShortcutByKeyCode;
+export default RegisterShortcutByKeyCode;

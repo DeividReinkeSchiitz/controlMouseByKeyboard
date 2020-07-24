@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": ["airbnb-base","eslint-plugin-import"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "rules": {
+   "linebreak-style": "off",
+   "quotes":[2,"double"],
+   "max-len":"off",
+   "no-return-assign":"off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+  }
+}
+}

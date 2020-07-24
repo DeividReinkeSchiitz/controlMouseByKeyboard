@@ -1,4 +1,4 @@
-module.exports = keys = {
+export default {
   KeyA: "30",
   KeyB: "48",
   KeyC: "46",
