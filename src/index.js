@@ -2,6 +2,7 @@ import iohook from "iohook";
 import RegisterShortcutByKeyCode from "./shortcuts.js";
 import keys from "./keys.js";
 
+
 const {
   ControlLeft, AltLeft, NumLock1, NumLock2, NumLock3, NumLock4, NumLock5, NumLock6, NumLock7, NumLock8, NumLock9,
 } = keys;
